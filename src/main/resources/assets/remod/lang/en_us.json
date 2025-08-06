@@ -1,0 +1,13 @@
+{
+  "itemGroup.remod": "Example Mod Tab",
+  "block.remod.example_block": "Example Block",
+  "item.remod.example_item": "Example Item",
+
+  "remod.configuration.title": "ReMod-NeoForgified Configs",
+  "remod.configuration.section.remod.common.toml": "ReMod-NeoForgified Configs",
+  "remod.configuration.section.remod.common.toml.title": "ReMod-NeoForgified Configs",
+  "remod.configuration.items": "Item List",
+  "remod.configuration.logDirtBlock": "Log Dirt Block",
+  "remod.configuration.magicNumberIntroduction": "Magic Number Text",
+  "remod.configuration.magicNumber": "Magic Number"
+}
