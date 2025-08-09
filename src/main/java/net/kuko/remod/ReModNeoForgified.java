@@ -21,7 +21,7 @@ import net.neoforged.neoforge.event.server.ServerStartingEvent;
 @Mod(ReModNeoForgified.MOD_ID)
 public class ReModNeoForgified {
     // Define mod id in a common place for everything to reference
-    public static final String MOD_ID = "remod";
+        public static final String MOD_ID = "remod";
     // Directly reference a slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
 
@@ -31,14 +31,11 @@ public class ReModNeoForgified {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
-
-
         // Here regs lol
 
 
 
-
-
+        // End regs lol
 
         NeoForge.EVENT_BUS.register(this);
 

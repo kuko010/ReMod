@@ -1,4 +1,4 @@
-package net.kuko.remod.data;
+package net.kuko.remod.datagen;
 
 import net.kuko.remod.ReModNeoForgified;
 import net.minecraft.data.PackOutput;

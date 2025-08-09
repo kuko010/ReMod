@@ -1,6 +1,5 @@
-package net.kuko.remod.data;
+package net.kuko.remod.datagen;
 
-import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.loot.BlockLootSubProvider;
