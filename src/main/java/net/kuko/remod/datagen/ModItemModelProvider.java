@@ -22,6 +22,8 @@ public class ModItemModelProvider extends ItemModelProvider {
 //        basicItem(ModItems.FROSTFIRE_ICE.get());
 //        basicItem(ModItems.CHISEL.get());
 
+
+
         basicItem(Items.DIAMOND);
     }
 }

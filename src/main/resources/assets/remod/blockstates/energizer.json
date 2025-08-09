@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "remod:block/energizer",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "remod:block/energizer"
+    },
+    "facing=south": {
+      "model": "remod:block/energizer",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "remod:block/energizer",
+      "y": 270
+    }
+  }
+}

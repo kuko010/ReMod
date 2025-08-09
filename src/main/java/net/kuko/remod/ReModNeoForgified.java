@@ -1,5 +1,9 @@
 package net.kuko.remod;
 
+import net.kuko.remod.init.ModBlocks;
+import net.kuko.remod.init.ModCreativeModTabs;
+import net.kuko.remod.init.ModItems;
+import net.neoforged.neoforge.common.NeoForgeMod;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -33,6 +37,9 @@ public class ReModNeoForgified {
 
         // Here regs lol
 
+        ModCreativeModTabs.ModCreativeTabsInit(modEventBus);
+        ModItems.ModItemsInit(modEventBus);
+        ModBlocks.ModBlocksInit(modEventBus);
 
 
         // End regs lol
