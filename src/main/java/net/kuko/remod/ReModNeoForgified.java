@@ -1,9 +1,17 @@
 package net.kuko.remod;
 
+import net.kuko.remod.block.entity.renderer.FiberGeneratorBlockEntityRenderer;
+import net.kuko.remod.init.ModBlockEntities;
 import net.kuko.remod.init.ModBlocks;
 import net.kuko.remod.init.ModCreativeModTabs;
 import net.kuko.remod.init.ModItems;
-import net.neoforged.neoforge.common.NeoForgeMod;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -25,7 +33,8 @@ import net.neoforged.neoforge.event.server.ServerStartingEvent;
 @Mod(ReModNeoForgified.MOD_ID)
 public class ReModNeoForgified {
     // Define mod id in a common place for everything to reference
-        public static final String MOD_ID = "remod";
+    public static final String MOD_ID = "remod";
+
     // Directly reference a slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
 
@@ -37,11 +46,11 @@ public class ReModNeoForgified {
 
         // Here regs lol
 
-        ModCreativeModTabs.ModCreativeTabsInit(modEventBus);
-        ModItems.ModItemsInit(modEventBus);
-        ModBlocks.ModBlocksInit(modEventBus);
+        ModCreativeModTabs.modCreativeTabsInit(modEventBus);
+        ModItems.modItemsInit(modEventBus);
+        ModBlocks.modBlocksInit(modEventBus);
 
-
+        ModBlockEntities.modBlockEntitiesInit(modEventBus);
         // End regs lol
 
         NeoForge.EVENT_BUS.register(this);
@@ -57,12 +66,11 @@ public class ReModNeoForgified {
         // Some common setup code
         LOGGER.info("HELLO FROM COMMON SETUP");
 
-        if (Config.LOG_DIRT_BLOCK.getAsBoolean()) {
-            LOGGER.info("DIRT BLOCK >> {}", BuiltInRegistries.BLOCK.getKey(Blocks.DIRT));
-        }
-        LOGGER.info("{}{}", Config.MAGIC_NUMBER_INTRODUCTION.get(), Config.MAGIC_NUMBER.getAsInt());
-
-        Config.ITEM_STRINGS.get().forEach((item) -> LOGGER.info("ITEM >> {}", item));
+//        if (Config.LOG_DIRT_BLOCK.getAsBoolean()) {
+//            LOGGER.info("DIRT BLOCK >> {}", BuiltInRegistries.BLOCK.getKey(Blocks.DIRT));
+//        }
+        //LOGGER.info("{}{}", Config.MAGIC_NUMBER_INTRODUCTION.get(), Config.MAGIC_NUMBER.getAsInt());
+        //Config.ITEM_STRINGS.get().forEach((item) -> LOGGER.info("ITEM >> {}", item));
     }
 
     // Add the example block item to the building blocks tab
@@ -71,6 +79,9 @@ public class ReModNeoForgified {
 //            event.accept(EXAMPLE_BLOCK_ITEM);
         }
     }
+
+
+
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent

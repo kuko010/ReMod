@@ -1,4 +1,4 @@
-package net.kuko.remod.block;
+package net.kuko.remod.block.helper;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.Direction;
@@ -11,10 +11,10 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import org.jetbrains.annotations.NotNull;
 
-public abstract class BaseEntityBlockHorizontalDirectionalBlock extends BaseEntityBlock {
+public abstract class BaseEntityHorizontalDirectionalBlock extends BaseEntityBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
-    protected BaseEntityBlockHorizontalDirectionalBlock(BlockBehaviour.Properties properties) {
+    protected BaseEntityHorizontalDirectionalBlock(BlockBehaviour.Properties properties) {
         super(properties);
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
     }
@@ -40,5 +40,5 @@ public abstract class BaseEntityBlockHorizontalDirectionalBlock extends BaseEnti
     }
 
     @Override
-    protected abstract @NotNull MapCodec<? extends BaseEntityBlockHorizontalDirectionalBlock> codec();
+    protected abstract @NotNull MapCodec<? extends BaseEntityHorizontalDirectionalBlock> codec();
 }

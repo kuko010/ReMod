@@ -12,7 +12,7 @@ public class ModItems {
 
 
 
-    public static void ModItemsInit(IEventBus bus) {
+    public static void modItemsInit(IEventBus bus) {
         ITEMS.register(bus);
     }
 }

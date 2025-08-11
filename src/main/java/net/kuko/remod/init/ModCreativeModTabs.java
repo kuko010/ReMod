@@ -19,15 +19,15 @@ public class ModCreativeModTabs {
             .title(Component.translatable("creative_tab." + ReModNeoForgified.MOD_ID + ".remod_tab"))
             //Set the icon of the tab.
             // TODO: when we will have our ingot, change the icon to it
-            .icon(() -> new ItemStack(ModBlocks.FiberGenerator.get()))
+            .icon(() -> new ItemStack(ModBlocks.FIBER_GENERATOR.get()))
             //Add your items to the tab.
             .displayItems((params, output) -> {
-                output.accept(ModBlocks.FiberGenerator);
+                output.accept(ModBlocks.FIBER_GENERATOR);
             })
             .build()
     );
 
-    public static void ModCreativeTabsInit(IEventBus bus) {
+    public static void modCreativeTabsInit(IEventBus bus) {
         CREATIVE_MODE_TABS.register(bus);
     }
 }
