@@ -1,24 +1,14 @@
 package net.kuko.remod;
 
-import net.kuko.remod.block.entity.renderer.FiberGeneratorBlockEntityRenderer;
 import net.kuko.remod.init.ModBlockEntities;
 import net.kuko.remod.init.ModBlocks;
 import net.kuko.remod.init.ModCreativeModTabs;
 import net.kuko.remod.init.ModItems;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.entity.EntityRenderers;
-import net.neoforged.api.distmarker.Dist;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
-import net.neoforged.neoforge.client.event.EntityRenderersEvent;
-import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
 
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.level.block.Blocks;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
@@ -47,7 +37,7 @@ public class ReModNeoForgified {
         // Here regs lol
 
         ModCreativeModTabs.modCreativeTabsInit(modEventBus);
-        ModItems.modItemsInit(modEventBus);
+        ModItems.modItemsInit(modEventBus); // This is *mostly* for AI-generated crap
         ModBlocks.modBlocksInit(modEventBus);
 
         ModBlockEntities.modBlockEntitiesInit(modEventBus);

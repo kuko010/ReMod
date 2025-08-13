@@ -30,15 +30,15 @@ public class ModItemTagProvider extends ItemTagsProvider {
 //                .add(Items.STICK)
 //                .add(Items.COMPASS);
 
-        tag(ModTags.Items.FIBERS)
-                .addTag(ItemTags.LOGS)            // All logs and stems
-                .addTag(ItemTags.PLANKS)          // All planks
-                .addTag(ItemTags.WOODEN_SLABS)    // Optional: slabs
-                .addTag(ItemTags.WOODEN_STAIRS)   // Optional: stairs
-                .addTag(ItemTags.WOODEN_FENCES)   // Optional: fences
-                .addTag(ItemTags.COALS)
-                .add(Items.LAVA_BUCKET)
-                .add(Items.COAL_BLOCK);
+//        tag(ModTags.Items.FIBERS)
+//                .addTag(ItemTags.LOGS)            // All logs and stems
+//                .addTag(ItemTags.PLANKS)          // All planks
+//                .addTag(ItemTags.WOODEN_SLABS)    // Optional: slabs
+//                .addTag(ItemTags.WOODEN_STAIRS)   // Optional: stairs
+//                .addTag(ItemTags.WOODEN_FENCES)   // Optional: fences
+//                .addTag(ItemTags.COALS)
+//                .add(Items.LAVA_BUCKET)
+//                .add(Items.COAL_BLOCK);
 
     }
 }

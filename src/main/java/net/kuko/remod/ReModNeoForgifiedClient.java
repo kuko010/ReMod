@@ -1,6 +1,5 @@
 package net.kuko.remod;
 
-import net.kuko.remod.block.entity.renderer.FiberGeneratorBlockEntityRenderer;
 import net.kuko.remod.init.ModBlockEntities;
 import net.minecraft.client.Minecraft;
 import net.neoforged.api.distmarker.Dist;
