@@ -1,9 +1,6 @@
 package net.kuko.remod;
 
-import net.kuko.remod.init.ModBlockEntities;
-import net.kuko.remod.init.ModBlocks;
-import net.kuko.remod.init.ModCreativeModTabs;
-import net.kuko.remod.init.ModItems;
+
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -20,8 +17,8 @@ import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
-@Mod(ReModNeoForgified.MOD_ID)
-public class ReModNeoForgified {
+@Mod(ReMod.MOD_ID)
+public class ReMod {
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "remod";
 
@@ -30,17 +27,17 @@ public class ReModNeoForgified {
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
-    public ReModNeoForgified(IEventBus modEventBus, ModContainer modContainer) {
+    public ReMod(IEventBus modEventBus, ModContainer modContainer) {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
         // Here regs lol
 
-        ModCreativeModTabs.modCreativeTabsInit(modEventBus);
-        ModItems.modItemsInit(modEventBus); // This is *mostly* for AI-generated crap
-        ModBlocks.modBlocksInit(modEventBus);
+//        ModCreativeModTabs.modCreativeTabsInit(modEventBus);
+//        ModItems.modItemsInit(modEventBus); // This is *mostly* for AI-generated crap
+//        ModBlocks.modBlocksInit(modEventBus);
 
-        ModBlockEntities.modBlockEntitiesInit(modEventBus);
+   //     ModBlockEntities.modBlockEntitiesInit(modEventBus);
         // End regs lol
 
         NeoForge.EVENT_BUS.register(this);

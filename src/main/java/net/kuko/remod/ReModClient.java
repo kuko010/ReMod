@@ -1,6 +1,6 @@
 package net.kuko.remod;
 
-import net.kuko.remod.init.ModBlockEntities;
+
 import net.minecraft.client.Minecraft;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -12,22 +12,22 @@ import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 
-@Mod(value = ReModNeoForgified.MOD_ID, dist = Dist.CLIENT)
-@EventBusSubscriber(modid = ReModNeoForgified.MOD_ID, value = Dist.CLIENT)
-public class ReModNeoForgifiedClient {
-    public ReModNeoForgifiedClient(ModContainer container) {
+@Mod(value = ReMod.MOD_ID, dist = Dist.CLIENT)
+@EventBusSubscriber(modid = ReMod.MOD_ID, value = Dist.CLIENT)
+public class ReModClient {
+    public ReModClient(ModContainer container) {
         container.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
     }
 
     @SubscribeEvent
     static void onClientSetup(FMLClientSetupEvent event) {
-        ReModNeoForgified.LOGGER.info("HELLO FROM CLIENT SETUP");
-        ReModNeoForgified.LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+        ReMod.LOGGER.info("HELLO FROM CLIENT SETUP");
+        ReMod.LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
     }
 
     @SubscribeEvent
     public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
-        event.registerBlockEntityRenderer(ModBlockEntities.FIBER_GENERATOR_BE.get(),
-                FiberGeneratorBlockEntityRenderer::new);
+//        event.registerBlockEntityRenderer(ModBlockEntities.FIBER_GENERATOR_BE.get(),
+//                FiberGeneratorBlockEntityRenderer::new);
     }
 }
