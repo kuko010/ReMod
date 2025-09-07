@@ -1,6 +1,8 @@
 package net.kuko.remod;
 
 
+import net.kuko.remod.block.ModBlocks;
+import net.kuko.remod.item.ModItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -19,25 +21,18 @@ import net.neoforged.neoforge.event.server.ServerStartingEvent;
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(ReMod.MOD_ID)
 public class ReMod {
-    // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "remod";
-
-    // Directly reference a slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
 
-    // The constructor for the mod class is the first code that is run when your mod is loaded.
-    // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
+
     public ReMod(IEventBus modEventBus, ModContainer modContainer) {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
-        // Here regs lol
+        // He
+        ModBlocks.registerModBlocks(modEventBus);
+        ModItems.registerModItems(modEventBus);
 
-//        ModCreativeModTabs.modCreativeTabsInit(modEventBus);
-//        ModItems.modItemsInit(modEventBus); // This is *mostly* for AI-generated crap
-//        ModBlocks.modBlocksInit(modEventBus);
-
-   //     ModBlockEntities.modBlockEntitiesInit(modEventBus);
         // End regs lol
 
         NeoForge.EVENT_BUS.register(this);
@@ -48,6 +43,7 @@ public class ReMod {
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
+
 
     private void commonSetup(FMLCommonSetupEvent event) {
         // Some common setup code
@@ -63,12 +59,9 @@ public class ReMod {
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-//            event.accept(EXAMPLE_BLOCK_ITEM);
+     //       event.accept(ModBlocks.PEDESTAL.get());
         }
     }
-
-
-
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
@@ -77,5 +70,5 @@ public class ReMod {
         LOGGER.info("HELLO from server starting");
     }
 
-    
+
 }
