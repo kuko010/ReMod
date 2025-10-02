@@ -1,8 +1,9 @@
 package net.kuko.remod;
 
 
-import net.kuko.remod.block.ModBlocks;
+
 import net.kuko.remod.item.ModItems;
+import net.minecraft.world.level.block.FurnaceBlock;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -30,8 +31,9 @@ public class ReMod {
         modEventBus.addListener(this::commonSetup);
 
         // He
-        ModBlocks.registerModBlocks(modEventBus);
-        ModItems.registerModItems(modEventBus);
+    //    ModBlocks.registerModBlocks(modEventBus);
+
+        ModItems.registerItems(modEventBus);
 
         // End regs lol
 
