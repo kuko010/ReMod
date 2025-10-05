@@ -1,7 +1,10 @@
 package net.kuko.remod.item;
 
 import net.kuko.remod.ReMod;
+import net.kuko.remod.item.custom.GravityItem;
+import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class ModItems {
@@ -9,23 +12,11 @@ public class ModItems {
 
 
 
+    public static final DeferredItem<Item> GRAVITY = ITEMS.register("gravity",
+            () -> new GravityItem(new Item.Properties()));
 //
 
     public static void registerItems(IEventBus bus) {
         ITEMS.register(bus);
-    }
-
-
-
-    // accounts = [[1,2,3],[3,2,1]]
-    public int maximumWealth(int[][] accounts) {
-        int highestWealth = 0;
-        for (int[] account : accounts) {
-            for (int bank : account) {
-                highestWealth += bank;
-            }
-        }
-
-        return 0;
     }
 }

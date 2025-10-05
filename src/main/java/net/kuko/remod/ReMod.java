@@ -43,7 +43,7 @@ public class ReMod {
         modEventBus.addListener(this::addCreative);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
-        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+   //     modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
 
@@ -62,6 +62,9 @@ public class ReMod {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
      //       event.accept(ModBlocks.PEDESTAL.get());
+
+        } else if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            event.accept(ModItems.GRAVITY.get());
         }
     }
 
