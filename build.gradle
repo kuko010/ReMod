@@ -19,6 +19,9 @@ group = mod_group_id
 
 repositories {
     // Add here additional repositories if required by some of the dependencies below.
+    maven {
+        url = "https://maven.favouriteless.net/releases"
+    }
 }
 
 base {
@@ -133,6 +136,13 @@ dependencies {
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
+
+    jarJar(implementation(group: 'com.wdiscute', name: 'libtooltips')) {
+        version {
+            // Version used in your workspace and bundled in mod jar
+            prefer '1.1'
+        }
+    }
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

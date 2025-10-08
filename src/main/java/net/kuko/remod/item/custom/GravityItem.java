@@ -60,26 +60,28 @@ public class GravityItem extends Item {
     }
 
 
-    @Override
-    public Component getName(ItemStack stack) {
-        return Component.empty()
-                .append(Component.literal("Potato's Tool").withStyle(ChatFormatting.AQUA));
-    }
+//    @Override
+//    public Component getName(ItemStack stack) {
+//        return Component.empty()
+//                .append(Component.literal("Potato's Tool").withStyle(ChatFormatting.AQUA));
+//    }
 
     public static final int level = 100;
-    @Override
-    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents,
-                                TooltipFlag tooltipFlag) {
-        tooltipComponents.add(Component.literal(String.format("Level: %d | 1000", level)).withStyle(ChatFormatting.GOLD));
-        tooltipComponents.add(Component.literal(String.format("XP: %d | 1100", level)).withStyle(ChatFormatting.AQUA));
-        tooltipComponents.add(Component.literal(" "));
-        tooltipComponents.add(Component.literal("Bonuses:").withStyle(ChatFormatting.YELLOW));
-        tooltipComponents.add(Component.literal(" +Attack Damage: 20.0").withStyle(ChatFormatting.GRAY));
-        tooltipComponents.add(Component.literal(" +Mining Speed: 50.0").withStyle(ChatFormatting.GRAY));
-        tooltipComponents.add(Component.literal(" Crit Chance: 6% x1.6").withStyle(ChatFormatting.DARK_AQUA));
-        tooltipComponents.add(Component.literal(" Poison on hit 4s").withStyle(ChatFormatting.GREEN));
-        tooltipComponents.add(Component.literal(" +Reach: +0.7").withStyle(ChatFormatting.DARK_PURPLE));
+//    @Override
+//    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents,
+//                                TooltipFlag tooltipFlag) {
+//        tooltipComponents.add(Component.literal(String.format("Level: %d | 1000", level)).withStyle(ChatFormatting.GOLD));
+//        tooltipComponents.add(Component.literal(String.format("XP: %d | 1100", level)).withStyle(ChatFormatting.AQUA));
+//        tooltipComponents.add(Component.literal(" "));
+//        tooltipComponents.add(Component.literal("Bonuses:").withStyle(ChatFormatting.YELLOW));
+//        tooltipComponents.add(Component.literal(" +Attack Damage: 20.0").withStyle(ChatFormatting.GRAY));
+//        tooltipComponents.add(Component.literal(" +Mining Speed: 50.0").withStyle(ChatFormatting.GRAY));
+//        tooltipComponents.add(Component.literal(" Crit Chance: 6% x1.6").withStyle(ChatFormatting.DARK_AQUA));
+//        tooltipComponents.add(Component.literal(" Poison on hit 4s").withStyle(ChatFormatting.GREEN));
+//        tooltipComponents.add(Component.literal(" +Reach: +0.7").withStyle(ChatFormatting.DARK_PURPLE));
+//
+//        super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+//    }
 
-        super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
-    }
+
 }
