@@ -65,6 +65,8 @@ public class ReMod {
 
         } else if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(ModItems.GRAVITY.get());
+        } else if (event.getTabKey() == CreativeModeTabs.COMBAT) {
+            event.accept(ModItems.WEAKENED_SWORD);
         }
     }
 

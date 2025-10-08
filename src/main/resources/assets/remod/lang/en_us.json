@@ -1,3 +1,9 @@
 {
+  "item.remod.gravity": "§bGravity",
+  "tooltip.remod.gravity.0": "<rgb>Rainbow</rgb>",
 
+
+  "key.remod.open": "Menu Opener",
+  "key.categories.remod": "ReMod"
 }
+
