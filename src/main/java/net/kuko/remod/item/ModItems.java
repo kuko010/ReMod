@@ -1,12 +1,7 @@
 package net.kuko.remod.item;
 
 import net.kuko.remod.ReMod;
-import net.kuko.remod.item.custom.GravityItem;
-import net.kuko.remod.item.custom.WeakenedSword;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.Tiers;
-import net.minecraft.world.item.component.Tool;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
