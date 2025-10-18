@@ -64,9 +64,9 @@ public class ReMod {
      //       event.accept(ModBlocks.PEDESTAL.get());
 
         } else if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
-            event.accept(ModItems.GRAVITY.get());
+//            event.accept(ModItems.GRAVITY.get());
         } else if (event.getTabKey() == CreativeModeTabs.COMBAT) {
-            event.accept(ModItems.WEAKENED_SWORD);
+            event.accept(ModItems.LASER.get());
         }
     }
 

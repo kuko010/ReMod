@@ -22,6 +22,10 @@ repositories {
     maven {
         url = "https://maven.favouriteless.net/releases"
     }
+
+    maven {
+        url = "https://jitpack.io"
+    }
 }
 
 base {
@@ -143,6 +147,8 @@ dependencies {
             prefer '1.1'
         }
     }
+
+    implementation "com.github.Virtuoel:Pehkui:${pehkui_version}"
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
